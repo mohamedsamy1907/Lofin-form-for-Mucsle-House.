@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>css</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/login.css">
+    <title>login form</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="#">Muscle Home</a></div>
+            <ul class="links">
+                <li><a href="Home">Home</a></li>
+                <li><a href="About">About</a></li>
+                <li><a href="Services">Services</a></li>
+                <li><a href="Contact">Contact</a></li>
+            </ul>
+            <a href="#" class="action_btn"> Get Started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="dropdown_menu">
+            <li><a href="Home">Home</a></li>
+            <li><a href="About">About</a></li>
+            <li><a href="Services">Services</a></li>
+            <li><a href="Contact">Contact</a></li>
+            <li> <a href="#" class="action_btn"> Get Started</a></li>
+        </div>
+    </header>
+    <main>
+        <section id="fitness">
+            <h1>Welcome</h1>
+            <p>Joining a fitness community is one of the best decisions you can make for your health and well-being.<br>
+                It's a place where you'll find support, encouragement, and accountability to help you reach your
+                goals.<br>
+                You'll be surrounded by like-minded individuals who share your passion for fitness and who will push you
+                to be your best self.<br>
+            <p class="join">Don't be afraid to take that first step and join us</p>
+            we're excited to welcome you into our community and help you achieve your fitness dreams!"
+            </p>
+        </section>
+    </main>
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+
+        const toggleBtnicon = document.querySelector('.toggle_btn i')
+        const dropdownmenu = document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropdownmenu.classList.toggle('open')
+
+            const isopen = dropdownmenu.classList.contains('open')
+            toggleBtnicon.classList = isopen
+                ? "fa-solid fa-xmark"
+                : "fa-solid fa-bars"
+        }
+    </script>
+
+</body>
+
+</html>
